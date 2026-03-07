@@ -1,9 +1,40 @@
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
+
+  <header>
+   <div class="container">
+
+     <div class="logo">
+        <h1>Image</h1>
+     </div>
+
+     <div class="title"> 
+      <h1>fictional name</h1>
+     </div>
+
+   </div>
+  </header>
+
+  <body>
+    <div class="containerbody">
+      
+        <div class="upperbar">
+          
+          <div class="productsandinsumes">
+
+          </div>
+          <div class = "containernew">
+
+          </div>
+
+        </div>
+
+        <div class="productslist">
+
+        </div>
+
+    </div>
+  </body>
+
 </template>
 
 <script setup></script>
