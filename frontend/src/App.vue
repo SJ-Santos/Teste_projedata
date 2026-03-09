@@ -25,7 +25,11 @@
 
           <div class = "buttonsright">
               <button id="suggestionbtn">Suggestion</button>
-              <button id="newbtn">New</button>
+              
+              <button id="newbtn">
+                <img src="./icons/add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" style="width:14px; margin-right: 6px;">
+                New
+              </button>
           </div>
 
         </div>
@@ -98,7 +102,7 @@
  #newbtn{
   background-color: #05fa1a;
   border-radius: 15px;
-  font-size: 13px;
+  font-size: 14px;
   cursor: pointer;
   padding: 10px 20px;
   margin-right: 8px;

@@ -59,7 +59,7 @@ function toggleDetails(){
     height: 20px;
     background-color: transparent;
     border: none;
-    background-image: url('../assets/arrow.png');
+    background-image: url('../icons/arrow_downward_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png');
     background-size: cover;
     cursor: pointer;
     transition: trasform 0.3s ease;
@@ -69,7 +69,7 @@ function toggleDetails(){
     height: 20px;
     background-color: transparent;
     border: none;
-    background-image: url('../assets/edit.png');
+    background-image: url('../icons/edit_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png');
     background-size: cover;
     cursor: pointer;
 }
@@ -78,7 +78,7 @@ function toggleDetails(){
     height: 20px;
     background-color: transparent;
     border: none;
-    background-image: url('../assets/remove.png');
+    background-image: url('../icons/close_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png');
     background-size: cover;
     cursor: pointer;
 }
