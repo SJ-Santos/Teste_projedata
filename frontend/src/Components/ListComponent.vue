@@ -26,10 +26,18 @@
 
 <script setup>
 import { ref } from 'vue'
+
+import NewInsumeComponent from './NewInsumeComponent.vue'
+import NewProductComponent from './NewProductComponent.vue'
+import SugestionComponent from './SugestionComponent.vue'
+import ListComponent from './ListComponent.vue'
+
+
 //na linha 17 talvez seja necessario alteração depois or causa do formato da lista de insumos
 const props = defineProps({
     product:Object
 })
+
 
 const emit = defineEmits(['remove','edit'])
 

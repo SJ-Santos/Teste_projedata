@@ -55,6 +55,37 @@ function submit(){
 </script>
 <style >
 
-
+.form{
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    margin: 20px auto;
+}
+.form h2{
+    margin-bottom: 20px;
+}
+.form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+.form .inputs{
+    display: flex;
+    gap: 10px;
+}
+.form .inputs input{
+    flex: 1;
+}
+.form .inputs button{
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
 </style>

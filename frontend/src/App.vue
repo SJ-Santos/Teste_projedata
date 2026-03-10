@@ -24,7 +24,9 @@
           </div>
 
           <div class = "buttonsright">
-              <button id="suggestionbtn">Suggestion</button>
+              <button id="suggestionbtn" @click="showSuggestions">Suggestion</button>
+              
+              <SugestionComponent v-if="currentView === 'suggestions'"/>
               
               <button id="newbtn">
                 <img src="./icons/add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" style="width:14px; margin-right: 6px;">
@@ -41,9 +43,41 @@
     </div>
   </body>
 
+  <SugestionComponent v-if="currentView === 'suggestions'"/>
+
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+
+import NewInsumeComponent from './Components/NewInsumeComponent.vue'
+import NewProductComponent from './Components/NewProductComponent.vue'
+import SugestionComponent from './Components/SugestionComponent.vue'
+import ListComponent from './Components/ListComponent.vue'
+
+const products = ref([])
+const insumes = ref([])
+
+function addProduct(p){
+  products.value.push(p)
+}
+
+function addInput(i){
+  inputs.value.push(i)
+}
+
+const currentView = ref("")
+
+function showProduct(){
+  currentView.value = "product"
+}
+function showInsume(){
+  currentView.value = "insume"
+}
+function showSuggestions(){
+  currentView.value = "suggestions"
+}
+</script>
 
 <style >
 *{
