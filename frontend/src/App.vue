@@ -24,12 +24,16 @@
           </div>
 
           <div class = "buttonsright">
-              <button id="suggestionbtn" @click="showSuggestions">Suggestion</button>
+              <button id="suggestionbtn" @click="showSuggestions" >
+                <SugestionComponent v-if="currentView === 'suggestions' && isOpen" @close="isOpen = false "/>
+
+                Suggestion
+              </button>
               
-              <SugestionComponent v-if="currentView === 'suggestions'"/>
               
-              <button id="newbtn">
+              <button id="newbtn" @click="showCreate">
                 <img src="./icons/add_24dp_E3E3E3_FILL0_wght400_GRAD0_opsz24.png" style="width:14px; margin-right: 6px;">
+                <CreateComponent v-if="currentView === 'create'" @addProduct="addProduct" @addInsume="addInput" @close="showCreate"/>
                 New
               </button>
           </div>
@@ -43,15 +47,13 @@
     </div>
   </body>
 
-  <SugestionComponent v-if="currentView === 'suggestions'"/>
 
 </template>
 
 <script setup>
 import { ref } from 'vue'
 
-import NewInsumeComponent from './Components/NewInsumeComponent.vue'
-import NewProductComponent from './Components/NewProductComponent.vue'
+import CreateComponent from './Components/CreateComponent.vue'
 import SugestionComponent from './Components/SugestionComponent.vue'
 import ListComponent from './Components/ListComponent.vue'
 
@@ -66,6 +68,8 @@ function addInput(i){
   inputs.value.push(i)
 }
 
+const isOpen = ref(true)
+
 const currentView = ref("")
 
 function showProduct(){
@@ -75,7 +79,20 @@ function showInsume(){
   currentView.value = "insume"
 }
 function showSuggestions(){
+  if(isOpen ){
+    currentView.value = ""
+    isOpen = false
+    return
+  }
   currentView.value = "suggestions"
+  
+}
+
+
+
+function showCreate(){
+ 
+  currentView.value = "create"
 }
 </script>
 
